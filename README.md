@@ -25,4 +25,20 @@ En caso de no tener instaladas estas ultimas,
 ```bash
 python -m pip install pyserial matplotlib
 ```
-  para instalar las dependencias externas.
+  para instalar las dependencias externas.  
+
+---
+
+## Flujo de datos  
+El firmware TAR envía frames binarios por puerto serie.  
+RecibirDatos recibe los bytes y los pasa a la GUI.  
+ProcesaDatosTAR.feed():  
+ - Extrae frames completos.  
+ - Decodifica timestamps, canales y valores.  
+Los datos Se almacenan en buffers internos.  
+Durante el ensayo:  
+ - Se realizan autoguardados y se generan archivos .bin y .csv  periódicamente.  
+ - Se visualizan en tiempo real.  
+Al finalizar el ensayo:  
+ - Se genera un archivo final .bin y .csv.  
+ - Se reinician los buffers.  
