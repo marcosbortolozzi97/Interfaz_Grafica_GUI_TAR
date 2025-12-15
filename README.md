@@ -35,7 +35,7 @@ python -m pip install pyserial matplotlib
 ### ProcesaDatosTAR.feed():
  - Extrae frames completos.  
  - Decodifica timestamps, canales y valores.  
-### Los datos Se almacenan en buffers internos.  
+### Los datos se almacenan en buffers internos.  
 ### Durante el ensayo:
  - Se realizan autoguardados y se generan archivos .bin y .csv  periódicamente.  
  - Se visualizan en tiempo real.  
