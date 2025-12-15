@@ -27,7 +27,8 @@ En caso de no tener instaladas estas ultimas, puede ejcutar en una PowerShell:
 ```bash
 python --version
 ```
-  para verificar su versión de python.
+  para verificar su versión de python,
 ```bash
 python -m pip install pyserial matplotlib
 ```
+  para instalar las dependencias externas.
