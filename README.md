@@ -14,13 +14,13 @@ El diseño separa:
 ## Dependencias necesarias  
 Asegurarse de tener instalado en el sistema:  
 Python 3.9 o superior  
-Librerías estándar:  
+### Librerías estándar:  
  - tkinter  
  - threading  
  - csv  
  - os  
  - time  
-Librerías externas:  
+### Librerías externas:  
  - pyserial  
  - matplotlib  
 En caso de no tener instaladas estas ultimas, puede ejcutar en una PowerShell:
