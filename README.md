@@ -32,11 +32,11 @@ python -m pip install pyserial matplotlib
 ## Flujo de datos  
 El firmware TAR envía frames binarios por puerto serie.  
 RecibirDatos recibe los bytes y los pasa a la GUI.  
-ProcesaDatosTAR.feed():  
+ProcesaDatosTAR.feed():
  - Extrae frames completos.  
- - Decodifica timestamps, canales y valores.  
+ - Decodifica timestamps, canales y valores.
 Los datos Se almacenan en buffers internos.  
-Durante el ensayo:  
+Durante el ensayo:
  - Se realizan autoguardados y se generan archivos .bin y .csv  periódicamente.  
  - Se visualizan en tiempo real.  
 Al finalizar el ensayo:  
