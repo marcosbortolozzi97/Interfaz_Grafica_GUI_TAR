@@ -13,15 +13,15 @@ El diseño separa:
 
 ## Dependencias necesarias  
 Asegurarse de tener instalado en el sistema:  
-Python 3.9 o superior   
+Python 3.9 o superior, puede ejcutar en una PowerShell:  
 ```bash
 python --version
 ```
-  para verificar su versión de python.
+  para verificar su versión de python.  
 ### Librerías externas:  
  - pyserial  
  - matplotlib  
-En caso de no tener instaladas estas ultimas, puede ejcutar en una PowerShell:  
+En caso de no tener instaladas estas ultimas,  
 ```bash
 python -m pip install pyserial matplotlib
 ```
