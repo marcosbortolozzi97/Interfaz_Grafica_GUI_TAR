@@ -13,13 +13,7 @@ El diseño separa:
 
 ## Dependencias necesarias  
 Asegurarse de tener instalado en el sistema:  
-Python 3.9 o superior  
-### Librerías estándar:  
- - tkinter  
- - threading  
- - csv  
- - os  
- - time  
+Python 3.9 o superior   
 ### Librerías externas:  
  - pyserial  
  - matplotlib  
