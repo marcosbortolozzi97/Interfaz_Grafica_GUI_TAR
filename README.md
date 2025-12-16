@@ -68,4 +68,4 @@ Puede finalizar el ensayo antes de finalizada la temporización presionando *fin
 
 ## **Resultados y extra**  
 Se genera un archivo .bin y dos archivos .csv (correspondiente a cada canal) cada 15 segundos durante el ensayo y se guardan en una carpeta llamada *ensayos*. Dentro de *ensayos* se crean las carpetas correspondientes a los datos guardados cada 15 segundos, denominadas *ensayo_AAAA-MM-DD_HH-MM-SS* (ej, ensayo_2024-10-22_13-51-32), que dentro incluye carpetas separadas *bin* y *csv*, las cuales contienen los archivos correspondientes al respectivo intervalo de 15 segundos.  
-Se puede por otro lado, reprocesar los archivos binarios (raw) presionando *Procesar binario previo*, y visualizar los resultados o realizar los análisis solicitados.
+Se puede por otro lado, reprocesar los archivos binarios (raw) presionando *Procesar binario previo*, se abre una carpeta en el directorio que se han creado los archivos y se pueden seleccionar el archivo .bin deseado. Se puede visualizar los resultados o realizar los análisis solicitados.
