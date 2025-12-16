@@ -125,15 +125,6 @@ class PanelEnsayo(ttk.LabelFrame):
             )
             return
 
-        # -------------------------
-        # Validación cruzada (GUI)
-        # -------------------------
-        if hasattr(self, "validar_inicio_callback") and self.validar_inicio_callback:
-            ok, msg = self.validar_inicio_callback()
-            if not ok:
-                messagebox.showwarning("No se puede iniciar el ensayo", msg)
-                return
-
         # ---------------------------
         # Validar condiciones externas
         # ---------------------------
@@ -166,10 +157,6 @@ class PanelEnsayo(ttk.LabelFrame):
         if self.on_limpiar:
             self.on_limpiar()
         self.var_estado.set("Registros limpios")
-
-    def mostrar_histograma(self):
-        if hasattr(self, "hist_panel"):
-            self.hist_panel.actualizar_grafico()
 
     def bloquear_duracion(self, flag: bool):
         """ Bloquea / desbloquea la edición de la duración del ensayo."""
