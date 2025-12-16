@@ -290,7 +290,7 @@ class MainWindow(tk.Tk):
 
         print("[MainWindow] Parámetros enviados correctamente al TAR.")
         try:
-            self.hist_panel.bloquear(True)
+            self.param_panel.bloquear(True)
         except Exception:
             pass
 
