@@ -58,10 +58,15 @@ Alternativamente, desde el editor, abrir main.py y ejecutarlo directamente.
 
 ## **Procedimiento Ensayo**  
 Conectar el dispositivo TAR por puerto serie, recargar y abrir la solapa, seleccionar el puerto disponible, presionar *conectar*.  
+  
 Configurar parámetros, los umbrales de la ventana de histeresis, *aplicar*.  
+  
 Es opcional fijar la ventana de los histogramas a efectos del inicio de ensayo, pero se los puede configurar para la visualización gráfica.  
+  
 Establecer la temporización del ensayo en unidades de segundos.  
+  
 Presionar *Iniciar ensayo* (es obligatorio para dar inicio al ensayo conectar el puerto, la aplicación de los parámetros y el seteo de la temporización).  
+  
 Puede finalizar el ensayo antes de finalizada la temporización presionando *finalizar ensayo*.  
 
 ---
