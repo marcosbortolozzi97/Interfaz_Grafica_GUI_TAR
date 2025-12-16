@@ -229,10 +229,7 @@ class MainWindow(tk.Tk):
         if total - self._last_ind >= 50:
             nuevos = self.process.registros_nuevos_desde(self._last_ind)
             self._last_ind = total
-            try:
-                self.hist_panel.procesar_nuevos_registros(nuevos)
-            except Exception:
-                pass
+            
 
     def on_serial_error(self, msg: str):
         print(f"[ERROR] {msg}")
