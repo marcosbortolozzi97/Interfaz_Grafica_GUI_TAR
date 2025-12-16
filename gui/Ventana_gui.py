@@ -10,7 +10,12 @@ from gui.Panel_Histograma import PanelHistograma
 
 from datetime import datetime
 import os, time
+from pathlib import Path
 
+BASE_DATA_DIR = Path.home() / "Documents" / "TAR_GUI"
+ENSAYOS_DIR = BASE_DATA_DIR / "ensayos"
+
+ENSAYOS_DIR.mkdir(parents=True, exist_ok=True)
 
 class MainWindow(tk.Tk):
     def __init__(self):
@@ -134,14 +139,14 @@ class MainWindow(tk.Tk):
     def iniciar_ensayo(self, duracion_seg):
         # Crear carpeta del ensayo
         fecha = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        base = os.path.join("ensayos", f"ensayo_{fecha}")
-        ruta_csv = os.path.join(base, "csv")
-        ruta_bin = os.path.join(base, "bin")
+        base = ENSAYOS_DIR / f"ensayo_{fecha}"
+        ruta_csv = base / "csv"
+        ruta_bin = base / "bin"
 
         # ProcesaDatosTAR guardará automáticamente ahí
         self.process.set_output_folders(
-            carpeta_csv=ruta_csv,
-            carpeta_bin=ruta_bin
+            carpeta_csv=str(ruta_csv),
+            carpeta_bin=str(ruta_bin)
         )
 
         # Configurar auto-guardado cada 15 segundos
@@ -241,9 +246,9 @@ class MainWindow(tk.Tk):
         from tkinter import filedialog
 
         filename = filedialog.askopenfilename(
-            title="Seleccionar archivo crudo",
-            initialdir="data/bin",
-            filetypes=[("Binarios TAR", "*.bin"), ("Todos los archivos", "*.*")]
+            title="Seleccionar archivo binario TAR",
+            initialdir=str(ENSAYOS_DIR),
+            filetypes=[("Binarios TAR", "*.bin")]
         )
 
         if not filename:
