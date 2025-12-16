@@ -67,7 +67,9 @@ Puede finalizar el ensayo antes de finalizada la temporización presionando *fin
 ---
 
 ## **Resultados y extra**  
-Se genera un archivo .bin y dos archivos .csv (correspondiente a cada canal) cada 15 segundos durante el ensayo y se guardan en una carpeta llamada *ensayos*. Dentro de *ensayos* se crean las carpetas correspondientes a los datos guardados cada 15 segundos, denominadas *ensayo_AAAA-MM-DD_HH-MM-SS* (ej, ensayo_2024-10-22_13-51-32), que dentro incluye carpetas separadas *bin* y *csv*, las cuales contienen los archivos correspondientes al respectivo intervalo de 15 segundos.    
-  Se puede por otro lado, reprocesar los archivos binarios crudos (raw) presionando *Procesar binario previo*, se abre una carpeta en el directorio que se han creado los archivos y se pueden seleccionar el archivo .bin deseado. Se puede visualizar los resultados o realizar los análisis solicitados.    
-  Existe un cuarto botón en el panel ensayo, *Limpiar_datos*, que al presionar limpia buffers internos y borra registros en RAM. Este tiene como finalidad ser utilizado si se quiere relanzar un .bin previo, o si se quiere limpiar el histograma antes de un nuevo ensayo manual. **No presionar durante un ensayo**.
+Se genera un archivo .bin y dos archivos .csv (correspondiente a cada canal) cada 15 segundos durante el ensayo y se guardan en una carpeta llamada *ensayos*. Dentro de *ensayos* se crean las carpetas correspondientes a los datos guardados cada 15 segundos, denominadas *ensayo_AAAA-MM-DD_HH-MM-SS* (ej, ensayo_2024-10-22_13-51-32), que dentro incluye carpetas separadas *bin* y *csv*, las cuales contienen los archivos correspondientes al respectivo intervalo de 15 segundos.  
+  
+Se puede por otro lado, reprocesar los archivos binarios crudos (raw) presionando *Procesar binario previo*, se abre una carpeta en el directorio que se han creado los archivos y se pueden seleccionar el archivo .bin deseado. Se puede visualizar los resultados o realizar los análisis solicitados.  
+  
+Existe un cuarto botón en el panel ensayo, *Limpiar_datos*, que al presionar limpia buffers internos y borra registros en RAM. Este tiene como finalidad ser utilizado si se quiere relanzar un .bin previo, o si se quiere limpiar el histograma antes de un nuevo ensayo manual. **No presionar durante un ensayo**.
 
