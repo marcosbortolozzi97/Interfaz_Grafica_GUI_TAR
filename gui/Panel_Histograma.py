@@ -120,7 +120,7 @@ class PanelHistogramaIndividual(ttk.LabelFrame):
         except ValueError:
             return
 
-        if bin_size <= 0 or minv >= maxv:
+        if maxv - minv < bin_size:
             return
 
         bins = list(range(minv, maxv + bin_size, bin_size))
@@ -128,7 +128,7 @@ class PanelHistogramaIndividual(ttk.LabelFrame):
         # Filtrar solo el canal correspondiente
         vals = [
             r["vp"] for r in registros
-            if r.get("chan") == self.canal and "error" not in r
+            if r.get("chan") == self.canal and "vp" in r and "error" not in r
         ]
 
         self.ax.cla()
@@ -163,6 +163,12 @@ class PanelHistograma(ttk.Frame):
         )
         self.hist_B.pack(fill="both", expand=True, pady=5)
 
+    def refrescar_completo(self):
+        self.hist_A.last_index = 0
+        self.hist_B.last_index = 0
+        self.hist_A._recalcular()
+        self.hist_B._recalcular()
+    
     # Permite que MainWindow bloquee ambos al iniciar ensayo
     def bloquear(self, flag: bool):
         self.hist_A._bloquear(flag)
